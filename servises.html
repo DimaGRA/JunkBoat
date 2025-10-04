@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JunkAway | Services</title>
+  <title>JunkAway | Contact</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    table {
+    iframe {
       width: 100%;
-      border-collapse: collapse;
+      height: 300px;
+      border: none;
       margin-top: 1em;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 1em;
-      text-align: center;
+    form {
+      margin-top: 1em;
+      background: #fff;
+      padding: 1.5em;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    th {
-      background: #2e8b57;
-      color: white;
+    input, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <header><h1>Our Services</h1></header>
+  <header><h1>Contact Us</h1></header>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -30,34 +36,38 @@
     <a href="contact.html">Contact</a>
   </nav>
   <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Residential Junk Removal</li>
-      <li>Commercial Cleanouts</li>
-      <li>Yard Waste Disposal</li>
-      <li>Appliance & Furniture Hauling</li>
-      <li>Construction Debris Removal</li>
-    </ul>
+    <p>📞 Call: (555) 123‑4567</p>
+    <p>📧 Email: d2011ng@hotmail.com</p>
 
-    <h2>Pricing</h2>
-    <table>
-      <tr>
-        <th>Service</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Small Load (1/4 Truck)</td>
-        <td>$99</td>
-      </tr>
-      <tr>
-        <td>Medium Load (1/2 Truck)</td>
-        <td>$179</td>
-      </tr>
-      <tr>
-        <td>Full Truck</td>
-        <td>$299</td>
-      </tr>
-    </table>
+    <h2>Request a Free Quote</h2>
+    <!-- Formspree setup with your email -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_replyto" value="d2011ng@hotmail.com">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="customer_email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="service">Service Needed:</label>
+      <input type="text" id="service" name="service" placeholder="e.g. Furniture removal">
+
+      <label for="message">Additional Details:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+
+    <h2>Find Us</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.123456789!2d-81.2100!3d28.5650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e768123456789%3A0xabcdef123456789!2sSt%20Cloud%2C%20FL!5e0!3m2!1sen!2sus!4v0000000000000"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
   </section>
   <footer><p>&copy; 2025 JunkAway</p></footer>
 </body>
